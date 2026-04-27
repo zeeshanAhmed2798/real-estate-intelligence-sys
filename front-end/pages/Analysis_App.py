@@ -397,5 +397,7 @@ def plot_affordability(df):
 
     return fig
 
+
+
 fig_afford = plot_affordability(df_map)
 st.plotly_chart(fig_afford, use_container_width=True)
