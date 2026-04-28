@@ -394,8 +394,7 @@ def plot_affordability(df):
         yaxis_title="Price per Bedroom",
         height=500
     )
-
+    
     return fig
-
 fig_afford = plot_affordability(df_map)
 st.plotly_chart(fig_afford, use_container_width=True)
