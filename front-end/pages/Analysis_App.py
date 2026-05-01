@@ -5,7 +5,6 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 st.set_page_config(page_title="Analytics", layout="wide")
 st.title("📊 Analytics")
-
 # -------------------- LOAD DATA --------------------
 @st.cache_data
 def load_map_data():
