@@ -20,7 +20,6 @@ def load_wc_data():
 
 df_map = load_map_data()   # 👉 for map
 df_wc = load_wc_data()     # 👉 for wordcloud
-
 # -------------------- MAP --------------------
 def plot_map(df):
     fig = px.scatter_mapbox(
