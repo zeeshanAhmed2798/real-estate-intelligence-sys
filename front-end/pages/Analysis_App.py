@@ -3,18 +3,21 @@ import pandas as pd
 import plotly.express as px
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[2]
 st.set_page_config(page_title="Analytics", layout="wide")
 st.title("📊 Analytics")
 # -------------------- LOAD DATA --------------------
 @st.cache_data
 def load_map_data():
-    df = pd.read_csv("flats_df_with_coords_v2.csv")
+    df = pd.read_csv(BASE_DIR / "data" / "processed" / "flats_df_with_coords_v2.csv")
     df.columns = df.columns.str.strip().str.lower()
     return df
 
 @st.cache_data
 def load_wc_data():
-    df = pd.read_csv("flats_df_with_coords.csv")
+    df = pd.read_csv(BASE_DIR / "data" / "processed" / "flats_df_with_coords.csv")
     df.columns = df.columns.str.strip().str.lower()
     return df
 
