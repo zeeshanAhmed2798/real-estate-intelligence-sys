@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.conda/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Data / ML artifacts (keep these out of git by default)
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# Project-specific large/generated data dirs
+artifacts/
+data/
+docs/
+notebooks/
+
+# Notebook-generated copies currently showing up as untracked
+Data Cleaning/*.pkl
