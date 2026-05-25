@@ -146,10 +146,19 @@ if property_choice == "Flat":
 
         pred = np.expm1(pred_log)[0]
         
+        margin = pred * 0.10
+        low = pred - margin
+
+        high = pred + margin
+        
         
 
         st.success(
             f"Estimated Flat Price: {round(pred,2)} Cr 💰"
+        )
+        
+        st.success(
+            f"Estimated Price Range: {low:.2f} Cr - {high:.2f} Cr"
         )
 
 # =========================================================
@@ -271,7 +280,16 @@ else:
         pred_log = model.predict(one_df)
 
         pred = np.expm1(pred_log)[0]
+        
+        margin = pred * 0.10
+        low = pred - margin
 
+        high = pred + margin
+        
         st.success(
             f"Estimated House Price: {round(pred,2)} Cr 💰"
+        )
+        
+        st.success(
+            f"Estimated Price Range: {low:.2f} Cr - {high:.2f} Cr"
         )
