@@ -135,7 +135,7 @@ st.markdown(
     """
     <div class="app-hero">
       <h1>Lahore Real Estate Intelligence System</h1>
-      <p class="muted">AI-powered price prediction, society recommendations, and feature insights — all in one dashboard.</p>
+      <p class="muted">AI-powered price prediction, location recommendations, and feature insights — all in one dashboard.</p>
     </div>
     """,
     unsafe_allow_html=True,
@@ -231,7 +231,7 @@ m1, m2, m3, m4, m5 = st.columns(5)
 m1.metric("Total Properties", f"{total_properties:,}")
 m2.metric("Total Houses", f"{total_houses:,}")
 m3.metric("Total Flats", f"{total_flats:,}")
-m4.metric("Total Societies", f"{total_societies:,}")
+m4.metric("Total Locations", f"{total_societies:,}")
 m5.metric("Avg Price", "—" if avg_price is None else f"{avg_price:,.0f}")
 
 st.markdown("### Visual Analytics")
@@ -298,7 +298,7 @@ st.markdown(
       <div class="wf-step"><div class="wf-top"><span class="wf-num">7</span><span class="wf-title">Feature Selection</span></div><div class="muted">Signal-focused inputs</div></div>
       <div class="wf-step"><div class="wf-top"><span class="wf-num">8</span><span class="wf-title">Model Selection &amp; Productionization</span></div><div class="muted">Training, pipelines, artifacts</div></div>
       <div class="wf-step"><div class="wf-top"><span class="wf-num">9</span><span class="wf-title">Analytics Module</span></div><div class="muted">Exploration &amp; visuals</div></div>
-      <div class="wf-step"><div class="wf-top"><span class="wf-num">10</span><span class="wf-title">Recommendation System</span></div><div class="muted">Society similarity</div></div>
+      <div class="wf-step"><div class="wf-top"><span class="wf-num">10</span><span class="wf-title">Recommendation System</span></div><div class="muted">Location similarity</div></div>
       <div class="wf-step"><div class="wf-top"><span class="wf-num">11</span><span class="wf-title">Insights Module</span></div><div class="muted">Feature impact explanation</div></div>
     </div>
     """,

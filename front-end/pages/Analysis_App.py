@@ -100,7 +100,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.subheader("☁️ Features WordCloud")
 
 societies = sorted(df_wc['society'].dropna().unique().tolist())
-selected_society = st.selectbox("Select Society", ["All"] + societies)
+selected_society = st.selectbox("Select Location", ["All"] + societies)
 
 # filter for wordcloud
 if selected_society != "All":
@@ -264,11 +264,11 @@ def plot_price_per_sqft(df):
         df,
         x="society",
         y="price_per_sqft",
-        title="Price per Sqft by Society"
+        title="Price per Sqft by Location"
     )
 
     fig.update_layout(
-        xaxis_title="Society",
+        xaxis_title="Location",
         yaxis_title="Price per Sqft",
         height=500
     )
@@ -283,7 +283,7 @@ st.plotly_chart(fig_pps, use_container_width=True)
 
 
 # -------------------- TOP SOCIETIES --------------------
-st.subheader("🏙 Top Societies by Average Price")
+st.subheader("🏙 Top Locations by Average Price")
 
 def plot_top_societies(df):
 
@@ -291,7 +291,7 @@ def plot_top_societies(df):
     df['price'] = pd.to_numeric(df['price'], errors='coerce')
     df = df.dropna(subset=['price'])
 
-    # average price per society
+    # average price per location
     avg_price = (
         df.groupby('society')['price']
         .mean()
@@ -304,12 +304,12 @@ def plot_top_societies(df):
         avg_price,
         x="society",
         y="price",
-        title="Top 10 Most Expensive Societies",
+        title="Top 10 Most Expensive Locations",
         text_auto=True
     )
 
     fig.update_layout(
-        xaxis_title="Society",
+        xaxis_title="Location",
         yaxis_title="Average Price",
         height=500
     )
